@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+.homePage
+{
+    height: 100dvh;
+    width: 100dvw;
+    background-image: url(https://images6.alphacoders.com/438/438835.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.homePage>h1,h2
+{
+    opacity: 1.0;
+    font-size: 5rem;
+    color: black;
+    text-shadow: 2px 2px 1px orange;
+    
+
+}
+a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+
+}
+button
+{
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
