@@ -6,8 +6,8 @@
 .display
 {
     height: 100dvh;
-    width: 98.7dvw
-     
+    width: 98.7dvw;
+    
 
 }
 .moreImages
@@ -15,6 +15,7 @@
     position: relative;
     bottom: 40dvh;
     margin-left: 25px;
+    left: 30px;
      
 }
 
