@@ -19,10 +19,13 @@ const ProductList=()=>
 
   
     return (
+     
         product.map((value,key)=>(
+
             <Product  key={key} propduct={value} />
             
         ))
+        
     )
 
 

@@ -51,3 +51,19 @@
     align-items: center;
     background-color: orange;
 }
+.cartButton
+{
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    height: 10dvh;
+    border: 1px solid red;
+    width: 10dvw;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    
+}
