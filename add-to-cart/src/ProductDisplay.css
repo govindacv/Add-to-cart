@@ -8,25 +8,46 @@
 .display 
 {
     height: 50dvh;
-    border: 1px solid yellow;
+    background-image: url(https://wallpapers.com/images/hd/gta-5-main-characters-e4rzrndhs77vx1ro.jpg);
+    background-size: cover;
+  
+ 
 }
 .thumbnail
 {
     height: 35dvh;
     width: 40dvh;
-    border: 1px solid red;
+ 
     position: relative;
     top: 50px;
     left: 30px;
 }
-.thumbnail>img
+.thumbnail button img
 {
-    height: inherit;
-    width: inherit;
+    height: 35dvh;
+    width: 20dvw;
 }
 .info
 {
-    height: 35dvh;
+    height: 50dvh;
     width: 40dvw;
-    border: 1px solid olive;
+ 
+    position: relative;
+    left: 30dvw;
+    bottom:  28vh;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.button>button
+{
+    height: 5dvh;
+    border: 1px solid red;
+    width: 10dvw;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    background-color: orange;
 }

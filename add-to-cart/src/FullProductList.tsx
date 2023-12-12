@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
-import ProductPropType from "./ProductsPropType"
-import axios from 'axios'
+import { useEffect, useState } from "react"
+ import axios from 'axios'
 import Product from "./ProductDisplay"
 
 const ProductList=()=>
@@ -18,8 +17,7 @@ const ProductList=()=>
       });
   }, []);
 
-
-
+  
     return (
         product.map((value,key)=>(
             <Product  key={key} propduct={value} />
