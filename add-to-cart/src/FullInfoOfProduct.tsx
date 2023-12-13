@@ -1,16 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import ProductPropType from "./ProductsPropType";
-import './ProductDisplay.css'
-import { Link, useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
- 
-
-
-
-
-
-const Product:React.FC<{propduct:ProductPropType}> = (prop)=>
+import './FullInfoOfProduct.css'
+const FullInfoOfproduct:React.FC<{product:ProductPropType}>=(prop)=>
 {
-    
+
     const Navigate=useNavigate()
     const {
         id,
@@ -24,22 +17,8 @@ const Product:React.FC<{propduct:ProductPropType}> = (prop)=>
         stock,
         thumbnail,
         images 
-      }=prop.propduct;
-     
-      const handleClick=()=>{
-
-        Navigate(`/Full-Info`,{state:prop.propduct})
-      }
-      
-//My cart Button
- function handleMyCartButton()
- {
-
-    Navigate(`/my-cart`)
-      
- }
-
-function handleAddToCart()
+      }=prop.product;
+      function handleAddToCart()
 {
     const localArr:ProductPropType[]=JSON.parse(localStorage.getItem('arr')|| '[]');
 
@@ -50,7 +29,7 @@ function handleAddToCart()
     keys.forEach((key)=>{
         const localObj=localArr[key as keyof typeof localArr]
        
-        if(prop.propduct.id===localObj.id)
+        if(prop.product.id===localObj.id)
         {
             
             bol=false
@@ -60,21 +39,26 @@ function handleAddToCart()
     })
     if(bol)
     {
-        localArr.push(prop.propduct)
+        localArr.push(prop.product)
     }
     localStorage.setItem('arr',JSON.stringify(localArr))
         
         
 
 }
+function handleMyCartButton()
+{
 
+   Navigate(`/my-cart`)
+     
+}
 
-    return(
+      return(
         <>
         <div className="cartButton"><button onClick={handleMyCartButton}>My Cart</button></div>
-        <div className="display">
+        <div className="displayOfFullInfo">
             <div className="thumbnail">
-                <button onClick={handleClick}><img src={thumbnail}  /></button>
+               <img src={thumbnail} alt="" />
             </div>
             <div className="info">
                 <p><b>Brand:</b>{brand}</p>
@@ -86,12 +70,21 @@ function handleAddToCart()
                 <p><b>rating(5):</b>{rating}*</p>
                 <p><b> In Stock:</b>{stock}</p>
                  <div className="button"><button onClick={handleAddToCart}>Add To Cart</button></div>
+        <>
+        {
+                        images.map((val)=>{
+                            <img src={val} alt=""  height={100} width={100}/>
+                        })
+                    }
+                    
+        </>
             </div>
              
         </div>
 
         </>
-    )
+      )
 }
 
-export default Product ;
+
+export default FullInfoOfproduct

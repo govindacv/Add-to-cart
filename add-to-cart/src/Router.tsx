@@ -4,7 +4,8 @@ import ProductList from "./FullProductList";
 import WelcomeCompnent from "./Welcome";
 import Product from "./ProductDisplay";
 import FullInfo from './FullInfo'
-import DB from "./DB";
+
+import CartItem from "./CartItems";
 const AppRoute=createBrowserRouter(
     [
         {
@@ -22,15 +23,15 @@ const AppRoute=createBrowserRouter(
                     element:<ProductList/>,
                 },
                 {
-                    path:'/added-to-cart',
-                    index:false,
-                    element:<DB/>
-                }
-                ,
-                {
                     path:'/Full-Info',
                     index:true,
                     element:<FullInfo />
+                }
+                ,
+                {
+                    path:'/my-cart',
+                    index:true,
+                    element:<CartItem/>
                 }
                 
             ]

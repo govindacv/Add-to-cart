@@ -4,6 +4,7 @@ import axios from "axios";
 import './FunnInfo.css'
 import { useLocation, useParams } from "react-router-dom";
 import Product from "./ProductDisplay";
+import FullInfoOfproduct from "./FullInfoOfProduct";
 
 const FullInfo=()=>
 {
@@ -14,7 +15,7 @@ const FullInfo=()=>
     
   return(
     <>
-    <Product propduct={product} />
+    <FullInfoOfproduct product={product} />
     
     {
         product.images.map((val:string)=>

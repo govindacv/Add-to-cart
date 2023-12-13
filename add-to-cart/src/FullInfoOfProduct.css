@@ -5,15 +5,7 @@
     box-sizing: border-box;
     
 }
-.display 
-{
-    height: 30dvh;
-    background-image: url(https://wallpapercave.com/wp/wp6258683.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  
- 
-}
+
 .thumbnail
 {
     height: 35dvh;
@@ -32,13 +24,14 @@
 {
     height: 50dvh;
     width: 40dvw;
- 
+    
     position: relative;
     left: 30dvw;
     bottom:  28vh;
     display: flex ;
     flex-direction: column;
     justify-content: space-around;
+    color: yellow;
 }
 .button>button
 {
@@ -62,9 +55,16 @@
     width: 10dvw;
     border-radius: 20px;
     font-size: 1rem;
-    color: black;
+    color: white;
     display: flex;
     align-items: center;
     background-color: orange;
     
+}
+.displayOfFullInfo
+{
+    height: 100dvh;
+    background-image: url(https://cdn.atomix.vg/wp-content/uploads/2020/02/rock-star-.jpg);
+    background-size: cover;
+        background-repeat: no-repeat;
 }

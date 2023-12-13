@@ -1,0 +1,17 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.myCartDisplay
+{
+    height: 100dvh;
+    width: 100dvw;
+   background-image: url(https://wallpapers.com/images/hd/4k-gta-5-michael-with-gun-vinewood-9eavb7qek2vrresw.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.thumbnail>img
+{
+    height: 30dvh;
+}
